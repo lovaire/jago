@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Adblock - JagoLive</title>
+    <meta name="description" content="Tutorial lengkap cara pasang adblock di HP Android, iPhone, dan PC untuk nonton streaming tanpa iklan mengganggu.">
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/a/AVvXsEiiCoWo1cDgYBBftrUBSWvl3N2b3zdc23CiXaA3YmpFvzaXj0H2XJ8HDs06k-sqEAcsFe5b7eVoF2ToytysXZUxdPgjwRgaateWs2G4yO81hIacQ3r-z4jjc5ydLUhsVolJE5Npce3SDx9cuQ8H3g6LOUCWx_8VwCx01XS3OGe-i-10Sot3zgdqEkOFZNY">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #080c10;
+            color: #e8edf2;
+            font-family: 'Barlow', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #0e1a26 0%, #0a1520 100%);
+            border-radius: 16px;
+            margin-bottom: 30px;
+            border: 1px solid #1e2a38;
+        }
+        .header h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 48px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .header p {
+            color: #5a7080;
+            font-size: 16px;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #131a22;
+            border: 1px solid #1e2a38;
+            color: #00d4ff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: #1a2330;
+            border-color: #00d4ff;
+        }
+        .section {
+            background: #0e1318;
+            border: 1px solid #1e2a38;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 28px;
+            color: #00d4ff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h3 {
+            font-size: 20px;
+            color: #e8edf2;
+            margin: 20px 0 12px;
+            padding-left: 12px;
+            border-left: 3px solid #00d4ff;
+        }
+        .section p {
+            color: #b0bec5;
+            margin-bottom: 12px;
+        }
+        .step {
+            background: #131a22;
+            border-left: 3px solid #00d4ff;
+            padding: 12px 16px;
+            margin: 12px 0;
+            border-radius: 6px;
+        }
+        .step strong {
+            color: #00d4ff;
+        }
+        .recommendation {
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .recommendation h4 {
+            color: #00d4ff;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        .browser-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin: 16px 0;
+        }
+        .browser-card {
+            background: #131a22;
+            border: 1px solid #1e2a38;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+        .browser-card:hover {
+            border-color: #00d4ff;
+            transform: translateY(-2px);
+        }
+        .browser-card i {
+            font-size: 32px;
+            color: #00d4ff;
+            margin-bottom: 8px;
+        }
+        .browser-card h5 {
+            color: #e8edf2;
+            margin-bottom: 4px;
+        }
+        .browser-card p {
+            font-size: 13px;
+            color: #5a7080;
+            margin: 0;
+        }
+        .warning {
+            background: rgba(255, 165, 0, 0.1);
+            border: 1px solid rgba(255, 165, 0, 0.3);
+            border-radius: 8px;
+            padding: 14px;
+            margin: 16px 0;
+            color: #ffb400;
+        }
+        .warning strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+        a {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .header h1 { font-size: 36px; }
+            .section { padding: 16px; }
+            .section h2 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Kembali ke JagoLive
+    </a>
+
+    <div class="header">
+        <h1><i class="fas fa-shield-alt"></i> Tutorial Adblock</h1>
+        <p>Pasang adblock untuk nonton streaming tanpa iklan mengganggu</p>
+    </div>
+
+    <!-- ANDROID -->
+    <div class="section">
+        <h2><i class="fab fa-android"></i> Android</h2>
+        
+        <div class="recommendation">
+            <h4>⭐ REKOMENDASI UTAMA: Brave Browser</h4>
+            <p>Browser dengan <strong>adblock bawaan</strong> yang paling efektif. Tinggal install dan langsung blokir iklan otomatis.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.brave.browser" target="_blank" style="display: inline-block; margin-top: 8px;">
+                <i class="fas fa-download"></i> Download Brave di Play Store
+            </a>
+        </div>
+
+        <h3>Cara 1: Pakai Brave Browser (Paling Gampang)</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Download Brave Browser dari Play Store
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Buka Brave, akses <a href="/">jagolive.xyz</a>
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Iklan otomatis diblokir! Nonton tanpa gangguan
+        </div>
+
+        <h3>Cara 2: Pakai Firefox + uBlock Origin</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Download Firefox dari Play Store
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Buka menu (⋮) → Add-ons → Cari "uBlock Origin"
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Install uBlock Origin, lalu buka <a href="/">jagolive.xyz</a>
+        </div>
+
+        <h3>Cara 3: Pakai DNS Pribadi (Tanpa Install App)</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Buka Settings → Network & Internet → Private DNS
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Pilih "Private DNS provider hostname"
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Masukkan: <code style="background:#1a2330; padding:2px 6px; border-radius:4px;">dns.adguard.com</code>
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Save, semua iklan di browser otomatis diblokir
+        </div>
+    </div>
+
+    <!-- iOS -->
+    <div class="section">
+        <h2><i class="fab fa-apple"></i> iPhone / iPad (iOS)</h2>
+
+        <div class="recommendation">
+            <h4>⭐ REKOMENDASI UTAMA: Brave Browser</h4>
+            <p>Sama kayak Android, Brave di iOS juga punya adblock bawaan yang sangat efektif.</p>
+            <a href="https://apps.apple.com/app/brave-browser-fast-adblocker/id1052879175" target="_blank" style="display: inline-block; margin-top: 8px;">
+                <i class="fas fa-download"></i> Download Brave di App Store
+            </a>
+        </div>
+
+        <h3>Cara 1: Pakai Brave Browser</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Download Brave dari App Store
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Buka Brave, akses <a href="/">jagolive.xyz</a>
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Iklan otomatis diblokir!
+        </div>
+
+        <h3>Cara 2: Safari + Content Blocker</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Download "1Blocker" atau "AdGuard" dari App Store
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Buka Settings → Safari → Extensions
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Aktifkan extension yang udah diinstall
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Buka Safari, akses <a href="/">jagolive.xyz</a>
+        </div>
+
+        <div class="warning">
+            <strong>⚠️ Catatan untuk iOS:</strong>
+            iOS lebih ketat soal adblock. Kalau masih ada iklan yang lolos, coba pakai Brave Browser karena paling efektif di iOS.
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="section">
+        <h2><i class="fas fa-desktop"></i> Desktop (PC/Laptop)</h2>
+
+        <div class="recommendation">
+            <h4>⭐ REKOMENDASI UTAMA: uBlock Origin Extension</h4>
+            <p>Extension adblock paling ringan dan efektif untuk semua browser desktop.</p>
+        </div>
+
+        <h3>Cara 1: Chrome / Edge / Brave</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Buka <a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm" target="_blank">Chrome Web Store</a>
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Klik "Add to Chrome" → "Add extension"
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> Icon uBlock muncul di toolbar, otomatis aktif
+        </div>
+        <div class="step">
+            <strong>Step 4:</strong> Buka <a href="/">jagolive.xyz</a>, iklan langsung diblokir!
+        </div>
+
+        <h3>Cara 2: Firefox</h3>
+        <div class="step">
+            <strong>Step 1:</strong> Buka <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" target="_blank">Firefox Add-ons</a>
+        </div>
+        <div class="step">
+            <strong>Step 2:</strong> Klik "Add to Firefox" → "Add"
+        </div>
+        <div class="step">
+            <strong>Step 3:</strong> uBlock Origin otomatis aktif
+        </div>
+
+        <h3>Cara 3: Pakai Browser dengan Adblock Bawaan</h3>
+        <div class="browser-grid">
+            <div class="browser-card">
+                <i class="fas fa-shield-alt"></i>
+                <h5>Brave</h5>
+                <p>Adblock bawaan, paling cepat</p>
+                <a href="https://brave.com/download/" target="_blank" style="font-size: 12px;">Download</a>
+            </div>
+            <div class="browser-card">
+                <i class="fab fa-firefox"></i>
+                <h5>Firefox</h5>
+                <p>Support uBlock Origin</p>
+                <a href="https://www.mozilla.org/firefox/" target="_blank" style="font-size: 12px;">Download</a>
+            </div>
+            <div class="browser-card">
+                <i class="fab fa-chrome"></i>
+                <h5>Chrome</h5>
+                <p>Pakai extension uBlock</p>
+                <a href="https://www.google.com/chrome/" target="_blank" style="font-size: 12px;">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+        <h2><i class="fas fa-question-circle"></i> FAQ</h2>
+        
+        <h3>Kenapa masih ada iklan yang lolos?</h3>
+        <p>Beberapa iklan pakai teknik canggih yang susah diblokir. Coba:</p>
+        <div class="step">
+            1. Update extension adblock ke versi terbaru
+        </div>
+        <div class="step">
+            2. Aktifkan "Fight the censorship" dan "Block media annoyances" di setting uBlock
+        </div>
+        <div class="step">
+            3. Pakai Brave Browser yang punya adblock lebih agresif
+        </div>
+
+        <h3>Adblock bikin lemot gak?</h3>
+        <p>Justru sebaliknya! Adblock bikin loading <strong>lebih cepat</strong> karena gak perlu download iklan. uBlock Origin cuma pakai 10-20MB RAM.</p>
+
+        <h3>Bisa blokir iklan di YouTube juga?</h3>
+        <p>Bisa! uBlock Origin dan Brave Browser bisa blokir iklan YouTube 100%.</p>
+    </div>
+
+    <div style="text-align: center; padding: 30px; color: #5a7080; font-size: 14px;">
+        <p>© 2026 JagoLive. Nonton streaming lebih nyaman tanpa iklan.</p>
+        <a href="/" style="color: #00d4ff;">← Kembali ke JagoLive</a>
+    </div>
+</body>
+</html>
